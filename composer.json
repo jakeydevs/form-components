@@ -1,0 +1,25 @@
+{
+  "name": "jakeydevs/form-components",
+  "description": "Opinionated laravel form components based on Tailwind UI",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Jakey",
+      "email": "jp@jakelprice.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "JakeyDevs\\FormComponents\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "JakeyDevs\\FormComponents\\FormComponentsServiceProvider"
+      ]
+    }
+  }
+}
