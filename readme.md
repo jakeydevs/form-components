@@ -2,6 +2,15 @@
 
 Package of inputs and design elements for forms based on Tailwind UI - very opinionated!
 
+## Install
+
+> composer require jakeydevs/form-components
+
+Add a new stack to your page template which will let any Javascript be used. All included JS libraries
+are loaded from CDN's
+
+`@stack('forms-js')`
+
 ## Components
 
 ### Form Sections
@@ -60,3 +69,18 @@ display="email"
 | bind     | No                 | Model the value is binded to                                   |
 
 Any extra attributes are cast onto the SELECT directly such as required
+
+### Checkbox
+
+Toggle box for checkbox
+
+`<x-form-components-checkbox name="active" label="Make article active" help="Help" :bind="@$article" />`
+
+| Variable | Required - Default | Description                                    |
+| -------- | ------------------ | ---------------------------------------------- |
+| name     | Yes                | The input name - will come through in POST     |
+| label    | No                 | Label text - if omitted, label is not rendered |
+| help     | No                 | Help text - if omitted, help is not rendered   |
+| bind     | No                 | Model the value is binded to                   |
+
+Value can be used as a way of forcing the default

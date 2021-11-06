@@ -19,7 +19,7 @@
   />
   @endif
   
-  <select multiple="true" id="{{ $name }}" name="{{ $name }}" class="{{ $gc('select') }}" {{ $attributes }}>
+  <select multiple="true" id="{{ $name }}" name="{{ $name }}[]" class="{{ $gc('select') }}" {{ $attributes }}>
     @foreach($options AS $key => $value)
       <option value="{{ $key }}" @if ($isSelected($key)) SELECTED @endif>
           {{ $value }}

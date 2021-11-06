@@ -29,9 +29,11 @@ abstract class Component extends BaseComponent
         //-- Our type can force mutation to something we
         //-- can actually use!
         if ((isset($this->type)) && ($this->type == 'datetime-local')) {
-            //-- Convert to correct format
-            $d = \Carbon\Carbon::parse($value);
-            $value = $d->format('Y-m-d\TH:i');
+            if ($value) {
+                //-- Convert to correct format
+                $d = \Carbon\Carbon::parse($value);
+                $value = $d->format('Y-m-d\TH:i');
+            }
         }
 
         //-- Give in - here it is

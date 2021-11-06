@@ -34,7 +34,6 @@ class SelectMultiple extends Component
                 $this->options[$opt->$track] = $opt->$display;
             }
         }
-
     }
 
     /**
@@ -44,9 +43,23 @@ class SelectMultiple extends Component
      */
     public function isSelected($option)
     {
-        foreach ($this->getValue() as $value) {
-            if ($value->{$this->track} == $option) {
-                return true;
+        $values = $this->getValue();
+        if ($values) {
+            foreach ($this->getValue() as $value) {
+
+                //-- Get what is selected
+                if (gettype($value) == 'string') {
+                    //-- String compare our value
+                    $selected = $value;
+                } else {
+                    //-- Its an object (eloquent)
+                    $selected = @($value->{$this->track});
+                }
+
+                //-- Compare
+                if ($selected == $option) {
+                    return true;
+                }
             }
         }
 
