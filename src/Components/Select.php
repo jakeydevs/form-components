@@ -10,13 +10,14 @@ class Select extends Component
     public $help;
     public $options;
     public $bind;
+    public $empty;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $options, $label = false, $help = '', $bind = null, $track = 'id', $display = 'text')
+    public function __construct($name, $options, $label = false, $help = '', $bind = null, $track = 'id', $display = 'text', $empty = false)
     {
         $this->name = $name;
         $this->label = $label;
@@ -33,6 +34,10 @@ class Select extends Component
             }
         }
 
+        //-- Empty?
+        if ($empty) {
+            $this->options = [0 => 'Please select'] + $this->options;
+        }
     }
 
     /**

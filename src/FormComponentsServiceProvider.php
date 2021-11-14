@@ -35,6 +35,7 @@ class FormComponentsServiceProvider extends ServiceProvider
             \JakeyDevs\FormComponents\Components\SelectMultiple::class,
             \JakeyDevs\FormComponents\Components\Editor::class,
             \JakeyDevs\FormComponents\Components\Checkbox::class,
+            \JakeyDevs\FormComponents\Components\Upload::class,
 
             //-- Alerts
             \JakeyDevs\FormComponents\Components\ValidationError::class,
