@@ -60,7 +60,11 @@
         ['horizontalRule'],
         ['removeformat'],
         ['fullscreen']
-    ]
+    ],
+    semantic: true,
+    resetCss: true,
+    removeformatPasted: true,
+    imageWidthModalEdit: true
 })
 .on('tbwinit', () => {});
 </script>
