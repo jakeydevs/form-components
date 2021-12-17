@@ -20,7 +20,7 @@ class Input extends Component
     {
         $this->name = $name;
         $this->type = $type;
-        $this->label = $name;
+        $this->label = $label;
         $this->help = $help;
         $this->bind = $bind;
     }
