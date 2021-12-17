@@ -20,6 +20,11 @@ class FormComponentsServiceProvider extends ServiceProvider
             'form-components'
         );
 
+        //-- Allow publishing so we can let Tailwind compile properly
+        $this->publishes([
+            __DIR__ . '/resources' => resource_path('views/vendor/form-components'),
+        ]);
+
         //-- Register view components
         $this->loadViewComponentsAs(config('form-components.name'), [
 
