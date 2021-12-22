@@ -15,7 +15,7 @@ class Checkbox extends Component
      *
      * @return void
      */
-    public function __construct($name, $type = 'text', $label = false, $help = '', $bind = null)
+    public function __construct($name, $label = false, $help = '', $bind = null)
     {
         $this->name = $name;
         $this->label = $label;
