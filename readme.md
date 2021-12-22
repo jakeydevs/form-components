@@ -14,10 +14,6 @@ Add a new stack to your page template which will let any Javascript be used. All
 
 `@stack('forms-js')`
 
-If you want to use the advanced SELECT options, you'll need to install a couple of plugins:
-
-> npm install vue-multiselect
-
 ## Components
 
 ### Form Sections
