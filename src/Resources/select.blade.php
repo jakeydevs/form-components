@@ -36,3 +36,18 @@
   @endif
   
 </fieldset>
+
+@once
+  @push('forms-js')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/base.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+  <script src='https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js'></script>
+  @endpush    
+@endonce
+
+@push('forms-js')
+<script>
+  const element = document.querySelector('#{{ $name }}');
+  new Choices(element);
+</script>
+@endpush
