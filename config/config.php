@@ -36,7 +36,7 @@ return [
     ],
 
     'input' => [
-        'default' => 'shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full border-gray-300 rounded-md',
+        'default' => 'focus:ring-indigo-500 focus:border-indigo-500 block w-full border-2 border-gray-300 rounded-md',
         'error' => 'border-red-700',
     ],
 
@@ -46,7 +46,7 @@ return [
     ],
 
     'textarea' => [
-        'default' => 'shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md',
+        'default' => 'block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-2 border-gray-300 rounded-md',
         'error' => 'border-red-700',
     ],
 
