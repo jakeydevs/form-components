@@ -6,10 +6,17 @@ Package of inputs and design elements for forms based on Tailwind UI - very opin
 
 > composer require jakeydevs/form-components
 
-Add a new stack to your page template which will let any Javascript be used. All included JS libraries
-are loaded from CDN's
+Then you'll need to publish the components so Tailwind can pick up the styles:
+
+> php artisan publish:vendor
+
+Add a new stack to your page template which will let any Javascript be used. All included JS libraries are loaded from CDN's
 
 `@stack('forms-js')`
+
+If you want to use the advanced SELECT options, you'll need to install a couple of plugins:
+
+> npm install vue-multiselect
 
 ## Components
 

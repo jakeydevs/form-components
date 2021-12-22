@@ -61,12 +61,6 @@ class FormComponentsServiceProvider extends ServiceProvider
             __DIR__ . '/../config/config.php',
             'form-components'
         );
-
-        //-- Publish to main file to allow tailwind to access it
-        $this->publishes([
-            __DIR__ . '/../config/config.php' => config_path('form-components.php'),
-        ]);
-
     }
 
 }
