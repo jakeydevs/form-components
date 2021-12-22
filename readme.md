@@ -12,6 +12,7 @@ Then you'll need to publish the components so Tailwind can pick up the styles:
 
 Add a new stack to your page template which will let any Javascript be used. All included JS libraries are loaded from CDN's
 
+`@stack('forms-head')`
 `@stack('forms-js')`
 
 ## Components

@@ -42,7 +42,7 @@ text="{{ $help }}"
 
 
 @once
-@push('forms-js')
+@push('forms-head')
 <style>
   :checked + .slider\:bg-indigo-600 {
     --tw-bg-opacity: 1;
