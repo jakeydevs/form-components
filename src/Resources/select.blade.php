@@ -50,7 +50,7 @@
 <script>
   var settings = {};
   new TomSelect('#{{ $name }}', {
-    controlClass: 'ts-control block w-full text-base py-2 px-3 overflow-hidden w-full relative z-1 flex border-gray-400 border-solid border-2 rounded-md',
+    controlClass: 'ts-control block w-full text-base py-2 px-3 overflow-hidden w-full relative z-1 flex border-gray-300 border-solid border-2 rounded-md',
     dropdownClass: 'ts-dropdown text-base'
   });
 </script>
