@@ -26,7 +26,7 @@ return [
     ],
 
     'label' => [
-        'default' => 'block font-medium capitalize text-gray-700',
+        'default' => 'block font-medium text-gray-700',
         'error' => 'text-red-700',
     ],
 
