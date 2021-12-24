@@ -36,6 +36,7 @@ class FormComponentsServiceProvider extends ServiceProvider
 
             //-- Inputs
             \JakeyDevs\FormComponents\Components\Input::class,
+            \JakeyDevs\FormComponents\Components\Textarea::class,
             \JakeyDevs\FormComponents\Components\Button::class,
             \JakeyDevs\FormComponents\Components\Select::class,
             \JakeyDevs\FormComponents\Components\SelectMultiple::class,
