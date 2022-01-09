@@ -8,6 +8,8 @@ use \Illuminate\Http\Request;
 
 abstract class Component extends BaseComponent
 {
+    /** @var boolean */
+    public $error = false;
 
     /**
      * Checks to see if we have a previous value
@@ -56,41 +58,21 @@ abstract class Component extends BaseComponent
     }
 
     /**
-     * Generate ClassList
+     * Did this component trigger an error message?
      *
-     * Get the classlist for the component. If error is set,
-     * when an error on this input is found, we'll also merge
-     * the error class. We'll grab the default class from config
-     *
-     * @param string $element The element to get config from
-     * @param string $overwrite Attribute to use for overwriting
-     * @return string
+     * @return void
      */
-    public function gc($element)
+    public function hasError()
     {
-        //-- List of all classes we want to display
-        $classlist = [];
-
-        //-- Get our defaults
-        $classes = config('form-components.' . $element, [
-            'default' => '',
-            'error' => '',
-        ]);
-
-        //-- Our default classlist
-        $classlist[] = $classes['default'];
-
-        //-- Do we have any errors?
         $errors = request()->session()->get('errors');
         if (!is_null($errors)) {
             if ($errors->has($this->name)) {
                 //-- Merge error classes into main
-                $classlist[] = @$classes['error'];
+                return true;
             }
         }
 
-        //-- Done
-        return implode(' ', $classlist);
+        return false;
     }
 
     /**

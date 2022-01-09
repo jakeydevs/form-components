@@ -1,1 +1,1 @@
-<p class="{{ $gc('help') }}">{{ $text }}</p>
+<p class="text-sm">{{ $text }}</p>

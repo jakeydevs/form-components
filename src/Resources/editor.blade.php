@@ -1,4 +1,9 @@
-<fieldset class="{{ $gc('fieldset') }}">
+<fieldset 
+  @class([
+    'space-y-2',
+    'bg-red-50 p-6 rounded' => $hasError()
+  ])
+>
   
   @if ($getErrors())
   <span class="inline-flex items-center px-3 py-1 rounded text-sm font-medium bg-red-100 text-red-800">

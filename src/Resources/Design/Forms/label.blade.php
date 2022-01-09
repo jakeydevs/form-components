@@ -1,3 +1,3 @@
-<label for="{{ $name }}" class="{{ $gc('label') }}">
+<label for="{{ $name }}" class="block font-medium text-gray-700">
   {{ $text }} {{ ($required) ? "*" : "" }}
 </label>
