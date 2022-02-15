@@ -32,7 +32,7 @@
   value="{{ $getValue() }}"
   {{ $attributes }}
   @class([
-    'focus:ring-indigo-500 focus:border-indigo-500 block w-full border-2 border-gray-300 rounded-md',
+    'focus:ring-indigo-500 focus:border-indigo-500 block w-full border-2 border-gray-300 rounded-md p-3',
     'border-red-700' => $hasError()
   ])
   >
