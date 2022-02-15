@@ -20,7 +20,7 @@ class Upload extends Component
     {
         $this->name = $name;
         $this->type = $type;
-        $this->label = $name;
+        $this->label = $label;
         $this->help = $help;
         $this->bind = $bind;
     }
@@ -33,5 +33,21 @@ class Upload extends Component
     public function render()
     {
         return view('form-components::upload');
+    }
+
+    /**
+     * How to display the file we have!
+     *
+     * @return string
+     */
+    public function getFileType()
+    {
+        $file = $this->getValue();
+        $im = @getimagesize($file);
+        if ($im == false) {
+            return "FILE";
+        } else {
+            return "IMAGE";
+        }
     }
 }
