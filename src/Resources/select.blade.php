@@ -61,7 +61,7 @@
 @endonce
 
 @push('forms-js')
-<script>
+<script type="module">
   new TomSelect('#{{ $name }}', {
     controlClass: 'ts-control block w-full text-base py-2 px-3 overflow-hidden w-full relative z-1 flex border-gray-300 border-solid border-2 rounded-md',
     dropdownClass: 'ts-dropdown text-base rounded overflow-hidden'

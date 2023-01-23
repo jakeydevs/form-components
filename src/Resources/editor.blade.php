@@ -52,7 +52,7 @@
 @endonce
 
 @push('forms-js')
-<script>
+<script type="module">
   $('#{{ $name }}').trumbowyg({
     btns: [
         ['viewHTML'],

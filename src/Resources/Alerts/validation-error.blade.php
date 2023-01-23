@@ -26,7 +26,7 @@
 </div>
 
 @push('forms-js')
-<script>
+<script type="module">
   $('.open-error-list').on('click', function() {
     $('.error-list').toggle()
   })
