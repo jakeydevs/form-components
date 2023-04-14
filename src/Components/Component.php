@@ -28,6 +28,14 @@ abstract class Component extends BaseComponent
         //-- Checks for old data sent in session
         $value = old($this->name, $value);
 
+        //-- Old doesn't like looking in input arrays...
+        if (preg_match('/(.*?)\[(.*?)\]/', $this->name, $matches)) {
+            $array_name = $matches[1];
+            $key = $matches[2];
+            $oldArray = old($array_name);
+            $value = $oldArray[$key] ?? $value;
+        }
+
         //-- Our type can force mutation to something we
         //-- can actually use!
         if ((isset($this->type)) && ($this->type == 'datetime-local')) {
